@@ -7,7 +7,6 @@ interface ChatInputProps {
   placeholder?: string
 }
 
-// Minimal shape of the Web Speech API so this compiles without extra @types packages.
 interface SpeechRecognitionResultLike {
   results: { [index: number]: { [index: number]: { transcript: string } } }
 }
@@ -50,7 +49,7 @@ export function ChatInput({ onSubmit, disabled, placeholder = 'Ask a followup qu
       return
     }
     if (trimmed.length < 2) {
-      setError('That looks too short — try a few more words.')
+      setError(' try a few more words.')
       return
     }
     setError(null)

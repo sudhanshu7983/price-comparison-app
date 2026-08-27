@@ -24,4 +24,4 @@ class UserResponse(BaseModel):
 class AuthResponse(BaseModel):
     access_token: str
     token_type: str
-    user: UserResponse
+    user: UserResponse   

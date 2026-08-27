@@ -5,9 +5,10 @@ interface HeaderProps {
   onBack?: () => void
   onOpenCards: () => void
   onOpenMenu: () => void
+  onSignOut: () => void
 }
 
-export function Header({ showBack, onBack, onOpenCards, onOpenMenu }: HeaderProps) {
+export function Header({ showBack, onBack, onOpenCards, onOpenMenu, onSignOut }: HeaderProps) {
   return (
     <header className="app-header">
       <div className="app-header__left">
@@ -25,6 +26,9 @@ export function Header({ showBack, onBack, onOpenCards, onOpenMenu }: HeaderProp
       <div className="app-header__right">
         <button className="pill-button" onClick={onOpenCards}>
           Your cards
+        </button>
+        <button className="pill-button logout-button" onClick={onSignOut}>
+          Log out
         </button>
         <button className="icon-button" onClick={onOpenMenu} aria-label="Menu">
           <IconMenu />

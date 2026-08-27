@@ -60,4 +60,4 @@ class Comparison(Base):
     user = relationship(
         "User",
         back_populates="comparisons"
-    )
+    ) 

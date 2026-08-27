@@ -873,6 +873,26 @@ input {
   cursor: not-allowed;
 }
 
+.signin-switch {
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.signin-switch:hover {
+  color: var(--ink);
+}
+
+.signin-switch:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .signin-orb {
   width: 54px;
   height: 54px;

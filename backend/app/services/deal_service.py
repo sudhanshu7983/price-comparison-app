@@ -54,4 +54,4 @@ def search_deals(query: str) -> list[Deal]:
     if deals:
         deals[0].is_cheapest = True
 
-    return deals
+    return deals  

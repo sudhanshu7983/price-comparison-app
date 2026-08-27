@@ -122,4 +122,4 @@ def delete_comparison(
     db.delete(comparison)
     db.commit()
 
-    return None
+    return None  

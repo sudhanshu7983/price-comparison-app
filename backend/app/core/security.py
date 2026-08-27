@@ -71,4 +71,4 @@ def decode_access_token(token: str) -> int:
 def get_token(
     credentials: HTTPAuthorizationCredentials,
 ) -> str:
-    return credentials.credentials
+    return credentials.credentials 

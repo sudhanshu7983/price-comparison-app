@@ -18,7 +18,11 @@ const DEBOUNCE_MS = 260
 const STEP_MS = 550
 
 export default function App() {
-  const { email } = useAuth()
+  const { email, isLoading, signOut } = useAuth()
+
+  if (isLoading) {
+    return <div className="app-shell"><div className="app-frame" /></div>
+  }
 
   if (!email) {
     return (
@@ -34,6 +38,7 @@ export default function App() {
 }
 
 function SignedInApp() {
+  const { signOut } = useAuth()
   const { saveComparison, isSaved } = useSaved()
   const [screen, setScreen] = useState<Screen>('home')
   const [query, setQuery] = useState('')
@@ -138,6 +143,7 @@ function SignedInApp() {
           onBack={goHome}
           onOpenCards={() => setScreen('saved')}
           onOpenMenu={() => setScreen(screen === 'home' ? 'saved' : 'home')}
+          onSignOut={signOut}
         />
 
         {screen === 'home' && (

@@ -17,7 +17,7 @@ from app.schemas.auth import (
     LoginRequest,
     RegisterRequest,
     UserResponse,
-)
+) 
 
 
 router = APIRouter(
@@ -136,4 +136,4 @@ def login(
 def get_me(
     current_user: User = Depends(get_current_user)
 ):
-    return current_user
+    return current_user  
